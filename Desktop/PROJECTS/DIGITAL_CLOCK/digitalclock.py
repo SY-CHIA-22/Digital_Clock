@@ -10,4 +10,9 @@ window.configure(bg"steelblue)
 label=Label(window, font=("Arial black", 78,"bold") bg="steelblue"
 label.package(paddy=100)
 
+def clock():
+    time=datetime.now().strttime("%H:%M:%S")
+label:Label(text=time)
+label.after(500,clock)
+clock()
 window.mainloop()
